@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Olympic Auto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (same as other pages) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Olympic Auto</a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SERVICES SECTION -->
+  <section class="services-page">
+    <div class="container">
+      <h1>Our Services</h1>
+      <p class="subtitle">Professional auto body and collision repair services in Buffalo, NY</p>
+
+      <div class="service-list">
+        <div class="service-card">
+          <h2>Collision Repair</h2>
+          <p>From fender benders to major accidents, we restore your car to factory condition.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Paint & Refinishing</h2>
+          <p>State-of-the-art color matching and refinishing to make your vehicle look brand new.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Frame Straightening</h2>
+          <p>Precision frame repair using advanced equipment for accurate alignment and safety.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Glass Replacement</h2>
+          <p>Cracked windshield or window? We replace auto glass quickly and correctly.</p>
+        </div>
+
+        <div class="service-card">
+          <h2>Insurance Claims</h2>
+          <p>We work with all major insurers and help streamline your claim process.</p>
+        </div>
+      </div>
+
+      <div class="center">
+        <a href="contact.html" class="cta-button">Request a Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Olympic Auto. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- NAV SCRIPT -->
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    toggle?.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        toggle.classList.remove("active");
+        nav.classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

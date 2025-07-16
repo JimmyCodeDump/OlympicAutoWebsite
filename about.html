@@ -1,0 +1,58 @@
+<!-- ABOUT.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Olympic Auto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Olympic Auto</a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="about-page">
+    <div class="container">
+      <h1>About Olympic Auto</h1>
+      <p>Olympic Auto has been proudly serving the Altamonte Springs, Florida community for over 20 years with reliable and trusted auto body services. We're a family-owned business focused on quality, honesty, and customer satisfaction.</p>
+      <p>Our technicians are certified and passionate about bringing your vehicle back to life, using top-of-the-line equipment and techniques.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Olympic Auto. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    toggle?.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        toggle.classList.remove("active");
+        nav.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+</html>

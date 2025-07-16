@@ -1,0 +1,66 @@
+
+<!-- GALLERY.HTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Olympic Auto</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Olympic Auto</a></div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="gallery-page">
+    <div class="container">
+      <h1>Gallery</h1>
+      <p>Take a look at some of our recent work and satisfied customers!</p>
+      <div class="gallery-grid">
+        <!-- Example images -->
+        <img src="assets/photo1.jpg" alt="Before and after repair">
+        <img src="assets/photo2.jpg" alt="Paint job result">
+        <img src="assets/photo3.jpg" alt="Frame straightening">
+        <!-- Add more as needed -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Olympic Auto. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    toggle?.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        toggle.classList.remove("active");
+        nav.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+</html>
+
