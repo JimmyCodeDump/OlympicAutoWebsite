@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olympic Auto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Olympic Auto</h1>
+      <p>Your Trusted Auto Repair & Service Experts</p>
+      <a href="#contact" class="btn">Book an Appointment</a>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Olympic Auto</div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At Olympic Auto, we provide reliable, affordable auto repair and maintenance services. With years of experience, we pride ourselves on honest work and friendly service. Whether it's an oil change or a full engine overhaul, we're here to help.</p>
+    <p>Bob Howell worked on his first car engine when he was just a freshman in high school. He was fascinated with the intricacies of the machinery that made the car go, and that fascination turned into a career.
+      Bob is well known to his customers for his fairness and honesty, and most notably for his excellence in workmanship.
+      Click on the map for directions, or just call us. We look forward to working with you!</p>
+  </section>
+
+  <section id="services" class="section services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/car--v1.png" alt="General Repair">
+        <h3>General Repair</h3>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/oil-industry.png" alt="Oil Change">
+        <h3>Oil Changes</h3>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/car-battery.png" alt="Battery Service">
+        <h3>Battery & Electrical</h3>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/steering-wheel.png" alt="Brake Repair">
+        <h3>Brake Services</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://source.unsplash.com/400x300/?car,repair" alt="Auto Repair 1">
+      <img src="https://source.unsplash.com/400x300/?garage,mechanic" alt="Auto Repair 2">
+      <img src="https://source.unsplash.com/400x300/?engine,auto" alt="Auto Repair 3">
+      <img src="https://source.unsplash.com/400x300/?car,service" alt="Auto Repair 4">
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2766.867971537075!2d-81.43302739015405!3d28.667235282404604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e776b2ffb8a50d%3A0x5382509a48af2262!2sOlympic%20Auto!5e1!3m2!1sen!2sus!4v1752703142385!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Olympic Auto • 1161 W State Road 436, Altamonte Springs, FL 32714 • (407) 774-4504</p>
+  </footer>
+  
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
+    const navLinks = document.querySelectorAll(".nav-links a");
+  
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+  
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        toggle.classList.remove("active");
+        nav.classList.remove("active");
+      });
+    });
+  </script>
+  
+</body>
+</html>
